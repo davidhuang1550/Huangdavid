@@ -17,15 +17,15 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 })
 export class HomePageComponent implements OnInit {
 
-  private quote = '';
+  private _quote = '';
 
-  private trait = '';
+  private _trait = '';
   /**
    * set the initial state of the quotes and traits
    */
   constructor() {
-    this.quote = Constant.QUOTES[0];
-    this.trait = Constant.TRAITS[0];
+    this._quote = Constant.QUOTES[0];
+    this._trait = Constant.TRAITS[0];
 
   }
 
@@ -42,11 +42,24 @@ export class HomePageComponent implements OnInit {
       if (position === Constant.QUOTES.length - 1) {
         position = 0;
       }
-      self.trait = Constant.TRAITS[position];
-      self.quote = Constant.QUOTES[position];
+      self._trait = Constant.TRAITS[position];
+      self._quote = Constant.QUOTES[position];
       position++;
 
     }, Constant.INTERVAL_MILLISECONDS);
   }
+  get trait(): string {
+    return this._trait;
+  }
 
+  set trait(value: string) {
+    this._trait = value;
+  }
+  get quote(): string {
+    return this._quote;
+  }
+
+  set quote(value: string) {
+    this._quote = value;
+  }
 }

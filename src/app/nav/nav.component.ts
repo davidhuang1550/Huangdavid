@@ -22,10 +22,6 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
     const self = this;
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(() => {
-      $('.navbar-collapse').collapse('hide');
-    });
     // Collapse the navbar when page is scrolled
     $(window).scroll(() => {
       if ($('#mainNav').offset().top > 100) {
@@ -34,7 +30,6 @@ export class NavComponent implements OnInit {
         self._navbarShrink = false;
       }
     });
-
   }
   get navView(): NavView {
     return this._navView;
