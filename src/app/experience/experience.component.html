@@ -1,0 +1,42 @@
+<section id="experience">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-timeline">
+          <div class="timeline" *ngFor="let experienceView of experienceViewList">
+            <div class="timeline-icon"></div>
+            <div class="timeline-content" [className]="['timeline-content ' + (experienceView.right ? 'right' : '')]">
+              <h6 class="title-date">{{experienceView.experience.starDate}} - {{experienceView.experience.endDate}}</h6>
+              <h4 class="title">{{experienceView.experience.title}}</h4>
+              <h6 class="title-employer">{{experienceView.experience.employer}}</h6>
+              <div *ngIf="experienceView.experience.tools.length">
+                <p>Tools : </p>
+                <ul>
+                  <li *ngFor="let tool of experienceView.experience.tools">
+                    {{tool}}
+                  </li>
+                </ul>
+              </div>
+              <div *ngIf="experienceView.experience.descriptions.length">
+                <p>Tasks : </p>
+                <ul>
+                  <li *ngFor="let description of experienceView.experience.descriptions">
+                    {{description}}
+                  </li>
+                  <li *ngFor="let detailedDescription of experienceView.descriptionKeys">
+                    {{detailedDescription}}
+                    <ul>
+                      <li *ngFor="let detailedSubDesc of experienceView.experience.detailedDescription.get(detailedDescription)">
+                        {{detailedSubDesc}}
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
