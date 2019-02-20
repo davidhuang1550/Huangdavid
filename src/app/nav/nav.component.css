@@ -3,7 +3,7 @@
   margin-bottom: 0;
   text-transform: uppercase;
   -webkit-transition: 1s;
-  font-size: .5em !important;}
+  font-size: .8em !important;}
 .navbar-shrink {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -17,7 +17,7 @@
   border: 1px solid white; }
 #mainNav .navbar-brand {
   font-weight: 700;
-  font-size: 1.3em !important;}
+  font-size: 2em !important;}
 #mainNav a {
   color: white; }
 #mainNav .navbar-nav .nav-item {

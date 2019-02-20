@@ -106,18 +106,18 @@ ul.timeline > li:before {
 
 .main-timeline .timeline-content li {
   color: black;
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .main-timeline .timeline-content p {
   padding-bottom: 0px;
-  font-size: 15px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
 .main-timeline .date{
   display: inline-block;
-  font-size: 16px;
+  font-size: 26px;
   font-weight: 300;
   color: #fff;
   padding: 12px 33px;
@@ -126,19 +126,19 @@ ul.timeline > li:before {
 }
 
 .main-timeline .title{
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 500;
   color: #5c5151;
   margin-top: 30px;
 }
 .main-timeline .title-date{
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 100;
   color: black;
   margin-top: 0px;
 }
 .main-timeline .title-employer{
-  font-size: 10px;
+  font-size: 20px;
   font-weight: 400;
   color: black;
   margin-top: 5px;
